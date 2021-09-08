@@ -56,11 +56,29 @@ class MainActivity : AppCompatActivity() {
                     style = TextStyle(MaterialTheme.colors.onPrimary)
                 )
             }
+            Spacer(modifier = Modifier.height(20.dp))
+            Button(
+                onClick = {
+                    openBallClickerGameActivity()
+                },
+                modifier = Modifier.background(MaterialTheme.colors.primary)
+            ) {
+                Text(
+                    text = "Ball clicker",
+                    modifier = Modifier.wrapContentSize(),
+                    style = TextStyle(MaterialTheme.colors.onPrimary)
+                )
+            }
         }
     }
 
     private fun openBasicShapeActivity() {
         val intent = Intent(this, BasicShapesActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openBallClickerGameActivity() {
+        val intent = Intent(this, BallClickerGame::class.java)
         startActivity(intent)
     }
 
