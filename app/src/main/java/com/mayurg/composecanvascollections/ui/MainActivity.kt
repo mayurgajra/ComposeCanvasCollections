@@ -69,6 +69,20 @@ class MainActivity : AppCompatActivity() {
                     style = TextStyle(MaterialTheme.colors.onPrimary)
                 )
             }
+
+            Spacer(modifier = Modifier.height(20.dp))
+            Button(
+                onClick = {
+                    openDrawTextActivity()
+                },
+                modifier = Modifier.background(MaterialTheme.colors.primary)
+            ) {
+                Text(
+                    text = "Draw Text",
+                    modifier = Modifier.wrapContentSize(),
+                    style = TextStyle(MaterialTheme.colors.onPrimary)
+                )
+            }
         }
     }
 
@@ -79,6 +93,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun openBallClickerGameActivity() {
         val intent = Intent(this, BallClickerGame::class.java)
+        startActivity(intent)
+    }
+
+    private fun openDrawTextActivity() {
+        val intent = Intent(this, DrawTextActivity::class.java)
         startActivity(intent)
     }
 

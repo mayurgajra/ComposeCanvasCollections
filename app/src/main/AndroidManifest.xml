@@ -20,6 +20,12 @@
             android:exported="true"
             android:label="@string/title_activity_basic_shapes"
             android:theme="@style/Theme.ComposeCanvasCollections.NoActionBar" />
+
+        <activity
+            android:name=".ui.DrawTextActivity"
+            android:exported="true"
+            android:label="@string/title_activity_basic_shapes"
+            android:theme="@style/Theme.ComposeCanvasCollections.NoActionBar" />
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">
