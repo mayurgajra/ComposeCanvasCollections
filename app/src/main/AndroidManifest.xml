@@ -11,21 +11,19 @@
         android:theme="@style/Theme.ComposeCanvasCollections">
         <activity
             android:name=".ui.BasicShapesActivity"
-            android:exported="true"
-            android:label="@string/title_activity_basic_shapes"
-            android:theme="@style/Theme.ComposeCanvasCollections.NoActionBar" />
+            android:exported="true" />
 
         <activity
             android:name=".ui.BallClickerGame"
-            android:exported="true"
-            android:label="@string/title_activity_basic_shapes"
-            android:theme="@style/Theme.ComposeCanvasCollections.NoActionBar" />
+            android:exported="true" />
 
         <activity
             android:name=".ui.DrawTextActivity"
-            android:exported="true"
-            android:label="@string/title_activity_basic_shapes"
-            android:theme="@style/Theme.ComposeCanvasCollections.NoActionBar" />
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.weightpicker.WeightPickerActivity"
+            android:exported="true" />
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">

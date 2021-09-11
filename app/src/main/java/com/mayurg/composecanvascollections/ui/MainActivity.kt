@@ -1,10 +1,9 @@
 package com.mayurg.composecanvascollections.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.Canvas
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
@@ -14,15 +13,10 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.drawBehind
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.geometry.Size
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import com.mayurg.composecanvascollections.ui.theme.ComposeCanvasCollectionsTheme
+import com.mayurg.composecanvascollections.ui.weightpicker.WeightPickerActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -83,6 +77,20 @@ class MainActivity : AppCompatActivity() {
                     style = TextStyle(MaterialTheme.colors.onPrimary)
                 )
             }
+
+            Spacer(modifier = Modifier.height(20.dp))
+            Button(
+                onClick = {
+                    weightPickerActivity()
+                },
+                modifier = Modifier.background(MaterialTheme.colors.primary)
+            ) {
+                Text(
+                    text = "Weight Picker",
+                    modifier = Modifier.wrapContentSize(),
+                    style = TextStyle(MaterialTheme.colors.onPrimary)
+                )
+            }
         }
     }
 
@@ -98,6 +106,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun openDrawTextActivity() {
         val intent = Intent(this, DrawTextActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun weightPickerActivity() {
+        val intent = Intent(this, WeightPickerActivity::class.java)
         startActivity(intent)
     }
 
