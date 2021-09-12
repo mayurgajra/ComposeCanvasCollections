@@ -24,6 +24,11 @@
         <activity
             android:name=".ui.weightpicker.WeightPickerActivity"
             android:exported="true" />
+
+        <activity
+            android:name=".ui.wallclock.WallClockActivity"
+            android:exported="true" />
+
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">

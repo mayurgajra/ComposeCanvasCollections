@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import com.mayurg.composecanvascollections.ui.theme.ComposeCanvasCollectionsTheme
+import com.mayurg.composecanvascollections.ui.wallclock.WallClockActivity
 import com.mayurg.composecanvascollections.ui.weightpicker.WeightPickerActivity
 
 class MainActivity : AppCompatActivity() {
@@ -81,12 +82,26 @@ class MainActivity : AppCompatActivity() {
             Spacer(modifier = Modifier.height(20.dp))
             Button(
                 onClick = {
-                    weightPickerActivity()
+                    openWeightPickerActivity()
                 },
                 modifier = Modifier.background(MaterialTheme.colors.primary)
             ) {
                 Text(
                     text = "Weight Picker",
+                    modifier = Modifier.wrapContentSize(),
+                    style = TextStyle(MaterialTheme.colors.onPrimary)
+                )
+            }
+
+            Spacer(modifier = Modifier.height(20.dp))
+            Button(
+                onClick = {
+                    openWallClockActivity()
+                },
+                modifier = Modifier.background(MaterialTheme.colors.primary)
+            ) {
+                Text(
+                    text = "Wall clock",
                     modifier = Modifier.wrapContentSize(),
                     style = TextStyle(MaterialTheme.colors.onPrimary)
                 )
@@ -109,8 +124,13 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun weightPickerActivity() {
+    private fun openWeightPickerActivity() {
         val intent = Intent(this, WeightPickerActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openWallClockActivity() {
+        val intent = Intent(this, WallClockActivity::class.java)
         startActivity(intent)
     }
 
