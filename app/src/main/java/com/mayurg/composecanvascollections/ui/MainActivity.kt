@@ -106,6 +106,20 @@ class MainActivity : AppCompatActivity() {
                     style = TextStyle(MaterialTheme.colors.onPrimary)
                 )
             }
+
+            Spacer(modifier = Modifier.height(20.dp))
+            Button(
+                onClick = {
+                    openPathsBasicActivity()
+                },
+                modifier = Modifier.background(MaterialTheme.colors.primary)
+            ) {
+                Text(
+                    text = "Paths Basics",
+                    modifier = Modifier.wrapContentSize(),
+                    style = TextStyle(MaterialTheme.colors.onPrimary)
+                )
+            }
         }
     }
 
@@ -131,6 +145,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun openWallClockActivity() {
         val intent = Intent(this, WallClockActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openPathsBasicActivity() {
+        val intent = Intent(this, PathsBasicActivity::class.java)
         startActivity(intent)
     }
 
