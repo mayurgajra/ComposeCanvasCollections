@@ -120,6 +120,20 @@ class MainActivity : AppCompatActivity() {
                     style = TextStyle(MaterialTheme.colors.onPrimary)
                 )
             }
+
+            Spacer(modifier = Modifier.height(20.dp))
+            Button(
+                onClick = {
+                    openPathsOpsActivity()
+                },
+                modifier = Modifier.background(MaterialTheme.colors.primary)
+            ) {
+                Text(
+                    text = "Paths Operations",
+                    modifier = Modifier.wrapContentSize(),
+                    style = TextStyle(MaterialTheme.colors.onPrimary)
+                )
+            }
         }
     }
 
@@ -150,6 +164,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun openPathsBasicActivity() {
         val intent = Intent(this, PathsBasicActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openPathsOpsActivity() {
+        val intent = Intent(this, PathOperationsActivity::class.java)
         startActivity(intent)
     }
 
