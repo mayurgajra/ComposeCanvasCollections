@@ -148,6 +148,20 @@ class MainActivity : AppCompatActivity() {
                     style = TextStyle(MaterialTheme.colors.onPrimary)
                 )
             }
+
+            Spacer(modifier = Modifier.height(20.dp))
+            Button(
+                onClick = {
+                    openAnimatedPathsArrowActivity()
+                },
+                modifier = Modifier.background(MaterialTheme.colors.primary)
+            ) {
+                Text(
+                    text = "Animated path arrow",
+                    modifier = Modifier.wrapContentSize(),
+                    style = TextStyle(MaterialTheme.colors.onPrimary)
+                )
+            }
         }
     }
 
@@ -188,6 +202,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun openAnimatedPathsLineActivity() {
         val intent = Intent(this, PathLineAnimationActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openAnimatedPathsArrowActivity() {
+        val intent = Intent(this, PathArrowAnimationActivity::class.java)
         startActivity(intent)
     }
 

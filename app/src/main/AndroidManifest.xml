@@ -42,6 +42,10 @@
             android:exported="true" />
 
         <activity
+            android:name=".ui.PathArrowAnimationActivity"
+            android:exported="true" />
+
+        <activity
             android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
