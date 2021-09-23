@@ -46,6 +46,10 @@
             android:exported="true" />
 
         <activity
+            android:name=".ui.TransformationAndClippingActivity"
+            android:exported="true" />
+
+        <activity
             android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>

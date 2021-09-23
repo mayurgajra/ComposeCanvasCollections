@@ -162,6 +162,20 @@ class MainActivity : AppCompatActivity() {
                     style = TextStyle(MaterialTheme.colors.onPrimary)
                 )
             }
+
+            Spacer(modifier = Modifier.height(20.dp))
+            Button(
+                onClick = {
+                    openTransformationAndClippingActivity()
+                },
+                modifier = Modifier.background(MaterialTheme.colors.primary)
+            ) {
+                Text(
+                    text = "Transformation & clipping",
+                    modifier = Modifier.wrapContentSize(),
+                    style = TextStyle(MaterialTheme.colors.onPrimary)
+                )
+            }
         }
     }
 
@@ -207,6 +221,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun openAnimatedPathsArrowActivity() {
         val intent = Intent(this, PathArrowAnimationActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openTransformationAndClippingActivity() {
+        val intent = Intent(this, TransformationAndClippingActivity::class.java)
         startActivity(intent)
     }
 
