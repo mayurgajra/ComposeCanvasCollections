@@ -176,6 +176,20 @@ class MainActivity : AppCompatActivity() {
                     style = TextStyle(MaterialTheme.colors.onPrimary)
                 )
             }
+
+            Spacer(modifier = Modifier.height(20.dp))
+            Button(
+                onClick = {
+                    openPathEffectsActivity()
+                },
+                modifier = Modifier.background(MaterialTheme.colors.primary)
+            ) {
+                Text(
+                    text = "Path Effects",
+                    modifier = Modifier.wrapContentSize(),
+                    style = TextStyle(MaterialTheme.colors.onPrimary)
+                )
+            }
         }
     }
 
@@ -226,6 +240,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun openTransformationAndClippingActivity() {
         val intent = Intent(this, TransformationAndClippingActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openPathEffectsActivity() {
+        val intent = Intent(this, PathEffectsActivity::class.java)
         startActivity(intent)
     }
 
