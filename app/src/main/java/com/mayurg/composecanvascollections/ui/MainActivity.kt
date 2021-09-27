@@ -190,6 +190,20 @@ class MainActivity : AppCompatActivity() {
                     style = TextStyle(MaterialTheme.colors.onPrimary)
                 )
             }
+
+            Spacer(modifier = Modifier.height(20.dp))
+            Button(
+                onClick = {
+                    openTextOnPathActivity()
+                },
+                modifier = Modifier.background(MaterialTheme.colors.primary)
+            ) {
+                Text(
+                    text = "Text On Path",
+                    modifier = Modifier.wrapContentSize(),
+                    style = TextStyle(MaterialTheme.colors.onPrimary)
+                )
+            }
         }
     }
 
@@ -245,6 +259,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun openPathEffectsActivity() {
         val intent = Intent(this, PathEffectsActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openTextOnPathActivity() {
+        val intent = Intent(this, TextOnPathActivity::class.java)
         startActivity(intent)
     }
 
