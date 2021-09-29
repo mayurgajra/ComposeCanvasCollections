@@ -10,53 +10,44 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposeCanvasCollections">
         <activity
+            android:name=".ui.genderpicker.GenderPickerActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.BasicShapesActivity"
             android:exported="true" />
-
         <activity
             android:name=".ui.BallClickerGame"
             android:exported="true" />
-
         <activity
             android:name=".ui.DrawTextActivity"
             android:exported="true" />
-
         <activity
             android:name=".ui.weightpicker.WeightPickerActivity"
             android:exported="true" />
-
         <activity
             android:name=".ui.wallclock.WallClockActivity"
             android:exported="true" />
-
         <activity
             android:name=".ui.PathsBasicActivity"
             android:exported="true" />
-
         <activity
             android:name=".ui.PathOperationsActivity"
             android:exported="true" />
-
         <activity
             android:name=".ui.PathLineAnimationActivity"
             android:exported="true" />
-
         <activity
             android:name=".ui.PathArrowAnimationActivity"
             android:exported="true" />
-
         <activity
             android:name=".ui.TransformationAndClippingActivity"
             android:exported="true" />
-
         <activity
             android:name=".ui.PathEffectsActivity"
             android:exported="true" />
-
         <activity
             android:name=".ui.TextOnPathActivity"
             android:exported="true" />
-
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">

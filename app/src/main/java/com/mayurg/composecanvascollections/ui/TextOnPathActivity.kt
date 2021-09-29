@@ -21,8 +21,8 @@ class TextOnPathActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             val path = Path().apply {
-                moveTo(200f,800f)
-                quadTo(600f,400f,1000f,800f)
+                moveTo(200f, 800f)
+                quadTo(600f, 400f, 1000f, 800f)
             }
             Canvas(modifier = Modifier.fillMaxSize()) {
                 drawContext.canvas.nativeCanvas.apply {

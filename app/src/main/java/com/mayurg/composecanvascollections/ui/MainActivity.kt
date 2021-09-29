@@ -15,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
+import com.mayurg.composecanvascollections.ui.genderpicker.GenderPickerActivity
 import com.mayurg.composecanvascollections.ui.theme.ComposeCanvasCollectionsTheme
 import com.mayurg.composecanvascollections.ui.wallclock.WallClockActivity
 import com.mayurg.composecanvascollections.ui.weightpicker.WeightPickerActivity
@@ -204,6 +205,20 @@ class MainActivity : AppCompatActivity() {
                     style = TextStyle(MaterialTheme.colors.onPrimary)
                 )
             }
+
+            Spacer(modifier = Modifier.height(20.dp))
+            Button(
+                onClick = {
+                    openGenderPickerActivity()
+                },
+                modifier = Modifier.background(MaterialTheme.colors.primary)
+            ) {
+                Text(
+                    text = "Gender Picker",
+                    modifier = Modifier.wrapContentSize(),
+                    style = TextStyle(MaterialTheme.colors.onPrimary)
+                )
+            }
         }
     }
 
@@ -264,6 +279,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun openTextOnPathActivity() {
         val intent = Intent(this, TextOnPathActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openGenderPickerActivity() {
+        val intent = Intent(this, GenderPickerActivity::class.java)
         startActivity(intent)
     }
 
