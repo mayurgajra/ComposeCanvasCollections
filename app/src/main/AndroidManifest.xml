@@ -49,6 +49,10 @@
             android:name=".ui.TextOnPathActivity"
             android:exported="true" />
         <activity
+            android:name=".ui.tictactoe.TicTacToeActivity"
+            android:exported="true" />
+
+        <activity
             android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>

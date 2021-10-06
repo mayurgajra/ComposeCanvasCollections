@@ -6,6 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -17,6 +19,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import com.mayurg.composecanvascollections.ui.genderpicker.GenderPickerActivity
 import com.mayurg.composecanvascollections.ui.theme.ComposeCanvasCollectionsTheme
+import com.mayurg.composecanvascollections.ui.tictactoe.TicTacToeActivity
 import com.mayurg.composecanvascollections.ui.wallclock.WallClockActivity
 import com.mayurg.composecanvascollections.ui.weightpicker.WeightPickerActivity
 
@@ -34,10 +37,13 @@ class MainActivity : AppCompatActivity() {
 
     @Composable
     fun ButtonsContainer() {
+        val scrollState = rememberScrollState()
+
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(16.dp),
+                .padding(16.dp)
+                .verticalScroll(scrollState),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Button(
@@ -219,6 +225,20 @@ class MainActivity : AppCompatActivity() {
                     style = TextStyle(MaterialTheme.colors.onPrimary)
                 )
             }
+
+            Spacer(modifier = Modifier.height(20.dp))
+            Button(
+                onClick = {
+                    openTicTacToeActivity()
+                },
+                modifier = Modifier.background(MaterialTheme.colors.primary)
+            ) {
+                Text(
+                    text = "Tic-Tac-Toe",
+                    modifier = Modifier.wrapContentSize(),
+                    style = TextStyle(MaterialTheme.colors.onPrimary)
+                )
+            }
         }
     }
 
@@ -284,6 +304,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun openGenderPickerActivity() {
         val intent = Intent(this, GenderPickerActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openTicTacToeActivity() {
+        val intent = Intent(this, TicTacToeActivity::class.java)
         startActivity(intent)
     }
 
