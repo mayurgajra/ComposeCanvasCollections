@@ -253,6 +253,20 @@ class MainActivity : AppCompatActivity() {
                     style = TextStyle(MaterialTheme.colors.onPrimary)
                 )
             }
+
+            Spacer(modifier = Modifier.height(20.dp))
+            Button(
+                onClick = {
+                    openImageRevealActivity()
+                },
+                modifier = Modifier.background(MaterialTheme.colors.primary)
+            ) {
+                Text(
+                    text = "Image Reveal",
+                    modifier = Modifier.wrapContentSize(),
+                    style = TextStyle(MaterialTheme.colors.onPrimary)
+                )
+            }
         }
     }
 
@@ -328,6 +342,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun openImageFilterActivity() {
         val intent = Intent(this, ImageFilterActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openImageRevealActivity() {
+        val intent = Intent(this, ImageRevealActivity::class.java)
         startActivity(intent)
     }
 
