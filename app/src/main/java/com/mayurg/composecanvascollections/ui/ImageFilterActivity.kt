@@ -16,7 +16,7 @@ import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
 import com.mayurg.composecanvascollections.R
-import com.mayurg.composecanvascollections.ui.ui.theme.ComposeCanvasCollectionsTheme
+import com.mayurg.composecanvascollections.ui.theme.ComposeCanvasCollectionsTheme
 
 class ImageFilterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
