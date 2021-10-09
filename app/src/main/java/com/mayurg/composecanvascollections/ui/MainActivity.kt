@@ -239,6 +239,20 @@ class MainActivity : AppCompatActivity() {
                     style = TextStyle(MaterialTheme.colors.onPrimary)
                 )
             }
+
+            Spacer(modifier = Modifier.height(20.dp))
+            Button(
+                onClick = {
+                    openImageFilterActivity()
+                },
+                modifier = Modifier.background(MaterialTheme.colors.primary)
+            ) {
+                Text(
+                    text = "Image Filter",
+                    modifier = Modifier.wrapContentSize(),
+                    style = TextStyle(MaterialTheme.colors.onPrimary)
+                )
+            }
         }
     }
 
@@ -309,6 +323,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun openTicTacToeActivity() {
         val intent = Intent(this, TicTacToeActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openImageFilterActivity() {
+        val intent = Intent(this, ImageFilterActivity::class.java)
         startActivity(intent)
     }
 

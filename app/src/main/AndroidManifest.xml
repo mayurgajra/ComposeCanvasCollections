@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposeCanvasCollections">
         <activity
+            android:name=".ui.ImageFilterActivity"
+            android:exported="true"
+            android:label="@string/title_activity_image_filter"
+            android:theme="@style/Theme.ComposeCanvasCollections.NoActionBar" />
+        <activity
             android:name=".ui.genderpicker.GenderPickerActivity"
             android:exported="true" />
         <activity
@@ -51,7 +56,6 @@
         <activity
             android:name=".ui.tictactoe.TicTacToeActivity"
             android:exported="true" />
-
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">
